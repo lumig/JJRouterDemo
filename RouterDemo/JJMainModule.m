@@ -15,36 +15,36 @@
 #import "ViewController.h"
 @implementation JJMainModule
 //注册每个模块需要调用appdelegate的生命周期方法
-+ (void)load
-{
-    NSArray *array = @[
-                       @"JJMainModule",
-//                       @"JJLoginProvider"
-
-                       ];
-    NSDictionary *config = @{
-                             @"router://JJAppDelegateModule/setDidFinishLaunchingModules" : array,
-                             @"router://JJAppDelegateModule/setApplicationOpenURLOptionsModules" : array,
-                             @"router://JJAppDelegateModule/setOpenURLModules" : array,
-                             @"router://JJAppDelegateModule/setApplicationDidEnterBackgroundModules" : array,
-                             @"router://JJAppDelegateModule/setApplicationWillEnterForegroundModules" : array,
-                             @"router://JJAppDelegateModule/setApplicationDidBecomeActiveModules" : array,
-                             @"router://JJAppDelegateModule/setApplicationWillTerminateModules" : array,
-                             @"router://JJAppDelegateModule/setSupportedInterfaceOrientationsForWindow" : array,
-                             @"router://JJAppDelegateModule/setDidReceiveRemoteNotificationModules" : array,
-                             @"router://JJAppDelegateModule/setDidRegisterForRemoteNotificationsWithDeviceTokenModules" : array,
-                             @"router://JJAppDelegateModule/setUserNotificationCenterDidReceiveNotificationResponseModules" : array,
-                             @"router://JJAppDelegateModule/setContinueUserActivityModules" : array,
-                             @"router://JJAppDelegateModule/setApplicationHandleOpenURLModules" : array
-                             };
-    for (NSString *url in config)
-    {
-        [JJRouter openURL:url arg:config[url] error:nil completion:nil];
-    }
-
-    NSString *urlrun = @"router://JJAppDelegateModule/run";
-    [JJRouter openURL:urlrun arg:nil error:nil completion:nil];
-}
+//+ (void)load
+//{
+//    NSArray *array = @[
+//                       @"JJMainModule",
+////                       @"JJLoginProvider"
+//
+//                       ];
+//    NSDictionary *config = @{
+//                             @"router://JJAppDelegateModule/setDidFinishLaunchingModules" : array,
+//                             @"router://JJAppDelegateModule/setApplicationOpenURLOptionsModules" : array,
+//                             @"router://JJAppDelegateModule/setOpenURLModules" : array,
+//                             @"router://JJAppDelegateModule/setApplicationDidEnterBackgroundModules" : array,
+//                             @"router://JJAppDelegateModule/setApplicationWillEnterForegroundModules" : array,
+//                             @"router://JJAppDelegateModule/setApplicationDidBecomeActiveModules" : array,
+//                             @"router://JJAppDelegateModule/setApplicationWillTerminateModules" : array,
+//                             @"router://JJAppDelegateModule/setSupportedInterfaceOrientationsForWindow" : array,
+//                             @"router://JJAppDelegateModule/setDidReceiveRemoteNotificationModules" : array,
+//                             @"router://JJAppDelegateModule/setDidRegisterForRemoteNotificationsWithDeviceTokenModules" : array,
+//                             @"router://JJAppDelegateModule/setUserNotificationCenterDidReceiveNotificationResponseModules" : array,
+//                             @"router://JJAppDelegateModule/setContinueUserActivityModules" : array,
+//                             @"router://JJAppDelegateModule/setApplicationHandleOpenURLModules" : array
+//                             };
+//    for (NSString *url in config)
+//    {
+//        [JJRouter openURL:url arg:config[url] error:nil completion:nil];
+//    }
+//
+//    NSString *urlrun = @"router://JJAppDelegateModule/run";
+//    [JJRouter openURL:urlrun arg:nil error:nil completion:nil];
+//}
 
 //调用该模块appdelegate需要执行生命周期方法
 + (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
