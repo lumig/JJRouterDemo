@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  CreditCat
+//
+//  Created by luming on 2017/3/17.
+//  Copyright © 2017年 luming. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#pragma mark - aimi
+#import <Masonry.h>
+#import <YYKit.h>
+#import "JJKit.h"
+#import "Action.h"
+#import "JJActionJumpMacro.h"
+#endif /* PrefixHeader_h */
